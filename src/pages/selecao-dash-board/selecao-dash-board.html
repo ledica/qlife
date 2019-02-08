@@ -1,0 +1,49 @@
+<ion-header>
+  <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-navbar>
+    <ion-title>
+      Seleção de DashBoard
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item color="positive" on-click="goToHomePessoal()">
+        <ion-avatar item-left>
+          <img src="assets/imgs/pessoa.ico" />
+        </ion-avatar>
+        <h2>
+          Pessoal
+        </h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="positive"></button>
+        <button ion-button color="positive"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item color="assertive" on-click="goToHomeProfissional()">
+      <ion-avatar item-left>
+        <img src="assets/imgs/profissional.svg" />
+      </ion-avatar>
+      <h2>
+        Profissional
+      </h2>
+    </ion-item>
+    <ion-item-sliding>
+      <ion-item color="balanced" on-click="goToHomeInstituicao()">
+        <ion-avatar item-left>
+          <img src="assets/imgs/instituicao.svg" />
+        </ion-avatar>
+        <h2>
+          Instituição
+        </h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="positive"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

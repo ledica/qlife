@@ -11,5 +11,10 @@ export class HomePage {
   constructor(public navCtrl: NavController) {
 
   }
-
+  public login(){
+    this.navCtrl.push('SelecaoDashBoardPage');
+  }
+  public registrar(){
+    this.navCtrl.push('CadastroContaPage');
+  }
 }

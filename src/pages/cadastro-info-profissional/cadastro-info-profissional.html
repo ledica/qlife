@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+       Informações Profissionais
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <form>
+    <ion-list>
+      <ion-item-divider color="light">
+        Informações Pessoais
+      </ion-item-divider>
+      <ion-item>
+        <ion-label>
+          Nome Completo
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Data de Nascimento
+        </ion-label>
+        <ion-input type="date" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          Sexo
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          CEP
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Logradouro
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Bairro
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Cidade
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Estado
+        </ion-label>
+        <ion-input type="text" placeholder=""></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-item-divider color="light">
+      Apresentação
+    </ion-item-divider>
+    <ion-item>
+      <ion-label>
+        Nome de Exibição
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Profissão
+      </ion-label>
+      <ion-input type="text" placeholder=""></ion-input>
+    </ion-item>
+    <ion-item >
+      <ion-label>
+        Biografia
+      </ion-label>
+      <ion-textarea placeholder=""></ion-textarea>
+    </ion-item>
+    <button ion-button color="positive" block icon-right on-click="goToCadastroLocaisTrabalho()">
+      Locais de Trabalho / Instituições
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <button ion-button color="positive" block icon-right on-click="goToFormacao()">
+      Formação
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <button ion-button color="positive" block icon-right on-click="goToConvenio()">
+      Convênios
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <button ion-button color="positive" block icon-right>
+      Permissões/Privacidade
+      <ion-icon name="arrow-dropright"></ion-icon>
+    </button>
+    <button ion-button color="stable" block>
+      Enviar
+    </button>
+  </form>
+</ion-content>

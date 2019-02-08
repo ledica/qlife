@@ -1,7 +1,7 @@
 <ion-content padding>
-  <h3>Q-Life</h3>
+  <h3><img src="assets/imgs/logo.png" alt="logo"/></h3>
 
-  <img src="assets/imgs/tela-inicial.png" alt="logo">
+  <img src="assets/imgs/tela-inicial.png" alt="prontuario"/>
   <form>
     <ion-item>
       <ion-label stacked>Email</ion-label>
@@ -11,7 +11,9 @@
       <ion-label stacked>Senha</ion-label>
       <ion-input type="password"></ion-input>
     </ion-item>
-    <button ion-button block>Entrar</button>
-  </form>
-  <button ion-button block outline>Registrar</button>
+    <button ion-button block (click)="login()">Entrar</button>
+    </form>
+  <button ion-button block outline (click)="registrar()">Registrar</button>
+  <br/>
+  <a href="#" block><img src="assets/imgs/sos.png" alt="sos-emergência"/></a>
 </ion-content>
