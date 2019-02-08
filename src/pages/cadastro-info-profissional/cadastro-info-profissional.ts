@@ -20,4 +20,8 @@ export class CadastroInfoProfissionalPage {
     if (!params) params = {};
     this.navCtrl.push('CadastroLocalTrabalhoPage');
   }
+
+  goToFormacao(){
+    this.navCtrl.push('CadastroFormacaoPage');
+  }
 }

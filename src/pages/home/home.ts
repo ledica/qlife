@@ -17,4 +17,7 @@ export class HomePage {
   public registrar(){
     this.navCtrl.push('CadastroContaPage');
   }
+  public prontuario(){
+    this.navCtrl.push('ProntuarioPage');
+  }
 }
