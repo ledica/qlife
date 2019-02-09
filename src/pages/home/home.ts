@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage, MenuController } from 'ionic-angular';
 import { Credenciais } from '../../models/credenciais';
+import { AuthService } from '../../services/auth.service';
 
 @IonicPage()
 @Component({
@@ -9,13 +10,16 @@ import { Credenciais } from '../../models/credenciais';
 })
 export class HomePage {
 
-  creds : Credenciais = {
+  creds: Credenciais = {
     email: "",
     password: ""
   };
 
-  constructor(public navCtrl: NavController, public menu: MenuController) {
-    
+  constructor(
+    public navCtrl: NavController,
+    public menu: MenuController,
+    public auth: AuthService) {
+
   }
 
   ionViewWillEnter() {
@@ -25,14 +29,18 @@ export class HomePage {
   ionViewDidLeave() {
     this.menu.swipeEnable(true);
   }
-  public login(){
-    console.log(this.creds);
-    this.navCtrl.push('SelecaoDashBoardPage');
+  public login() {
+    this.auth.authenticate(this.creds)
+      .subscribe(response => {
+        console.log(response.headers.get('Authorization'));
+        this.navCtrl.setRoot('SelecaoDashBoardPage');
+      },
+        error => {});
   }
-  public registrar(){
+  public registrar() {
     this.navCtrl.push('CadastroContaPage');
   }
-  public prontuario(){
+  public prontuario() {
     this.navCtrl.push('ProntuarioPage');
   }
 }
