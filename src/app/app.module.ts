@@ -17,7 +17,8 @@ import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp),
+    IonicModule.forRoot(MyApp)
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [

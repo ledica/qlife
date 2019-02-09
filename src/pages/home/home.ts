@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage, MenuController } from 'ionic-angular';
+import { Credenciais } from '../../models/credenciais';
 
 @IonicPage()
 @Component({
@@ -7,6 +8,11 @@ import { NavController, IonicPage, MenuController } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+  creds : Credenciais = {
+    email: "",
+    password: ""
+  };
 
   constructor(public navCtrl: NavController, public menu: MenuController) {
     
@@ -20,6 +26,7 @@ export class HomePage {
     this.menu.swipeEnable(true);
   }
   public login(){
+    console.log(this.creds);
     this.navCtrl.push('SelecaoDashBoardPage');
   }
   public registrar(){
