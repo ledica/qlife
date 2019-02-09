@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlergiaService } from '../../services/domain/alergia.service';
+import { Alergia } from '../../models/alergia';
 
 
 @IonicPage()
@@ -9,6 +10,8 @@ import { AlergiaService } from '../../services/domain/alergia.service';
   templateUrl: 'alergia.html',
 })
 export class AlergiaPage {
+  
+  items: Alergia[];
 
   constructor(
     public navCtrl: NavController,
@@ -19,7 +22,7 @@ export class AlergiaPage {
   ionViewDidLoad() {
     this.alergiaService.findAll()
     .subscribe(response=>{
-      console.log(response);
+      this.items = response;
     },error=>{
       console.log(error);
     });
