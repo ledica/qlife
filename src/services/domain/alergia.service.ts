@@ -11,6 +11,6 @@ export class AlergiaService {
     }
 
     findAll():Observable<Alergia[]>{
-        return this.http.get<Alergia[]>(`${API_CONFIG.baseUrl}api/v1/alergia/all`);
+        return this.http.get<Alergia[]>(`${API_CONFIG.baseUrl}/api/v1/alergia/all`);
     }
 }

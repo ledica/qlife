@@ -1,46 +1,49 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>
-        Cadastro Perfil
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-  <ion-content padding>
-    <ion-list id="cadastroPerfil-list11">
-      <ion-item-sliding>
-        <ion-item color="positive" on-click="goToCadastroPaciente()" >
-          <ion-avatar item-left>
-            <img src="assets/imgs/pessoa.ico" />
-          </ion-avatar>
-          <h2>
-            Pessoal
-          </h2>
-        </ion-item>
-        <ion-item-options side="left">
-          <button ion-button color="positive"></button>
-          <button ion-button color="positive"></button>
-        </ion-item-options>
-      </ion-item-sliding>
-      <ion-item color="assertive" on-click="goToCadastroProfissional()">
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cadastro Perfil
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding>
+      <ion-item color="positive" on-click="goToCadastroPaciente()">
         <ion-avatar item-left>
-          <img src="assets/imgs/profissional.svg" />
+          <img src="assets/imgs/pessoa.ico" />
         </ion-avatar>
         <h2>
-          Profissional
+          Pessoal
         </h2>
       </ion-item>
-      <ion-item-sliding>
-        <ion-item color="balanced" on-click="goToCadastroInstituicao()">
-          <ion-avatar item-left>
-            <img src="assets/imgs/instituicao.svg" />
-          </ion-avatar>
-          <h2>
-            Instituição
-          </h2>
-        </ion-item>
-        <ion-item-options side="left">
-          <button ion-button color="positive"></button>
-        </ion-item-options>
-      </ion-item-sliding>
-    </ion-list>
-  </ion-content>
+      <ion-item-options side="left">
+        <button ion-button color="positive"></button>
+        <button ion-button color="positive"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+    <ion-item color="assertive" on-click="goToCadastroProfissional()">
+      <ion-avatar item-left>
+        <img src="assets/imgs/profissional.svg" />
+      </ion-avatar>
+      <h2>
+        Profissional
+      </h2>
+    </ion-item>
+    <ion-item-sliding>
+      <ion-item color="balanced" on-click="goToCadastroInstituicao()">
+        <ion-avatar item-left>
+          <img src="assets/imgs/instituicao.svg" />
+        </ion-avatar>
+        <h2>
+          Instituição
+        </h2>
+      </ion-item>
+      <ion-item-options side="left">
+        <button ion-button color="positive"></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

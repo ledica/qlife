@@ -1,31 +1,34 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>
-        Cadastro Perfil Pessoal
-      </ion-title>
-    </ion-navbar>
-  </ion-header>
-  <ion-content padding id="page14">
-    <form id="cadastroPerfilPessoal-form12">
-      <ion-item color="none" on-click="goToCadastroMinhaFichaMDica()" id="cadastroPerfilPessoal-list-item72">
-        Minha Ficha Médica
-        <ion-icon name="arrow-dropright" item-right></ion-icon>
-      </ion-item>
-      <ion-item color="none" on-click="goToCadastroPerfilDependentes()" id="cadastroPerfilPessoal-list-item73">
-        Dependentes
-        <ion-icon name="arrow-dropright" item-right></ion-icon>
-      </ion-item>
-      <ion-item color="none" on-click="goToCadastroPerfilContatos()" id="cadastroPerfilPessoal-list-item74">
-        Contatos
-        <ion-icon name="arrow-dropright" item-right></ion-icon>
-      </ion-item>
-      <ion-item color="none" id="cadastroPerfilPessoal-list-item75">
-        Permissões de Visibilidade
-        <ion-icon name="arrow-dropright" item-right></ion-icon>
-      </ion-item>
-      <ion-item color="none" id="cadastroPerfilPessoal-list-item76">
-        Permissões de Gerenciamento
-        <ion-icon name="arrow-dropright" item-right></ion-icon>
-      </ion-item>
-    </form>
-  </ion-content>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Cadastro Perfil Pessoal
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content >
+  <form >
+    <ion-item color="none" on-click="goToCadastroMinhaFichaMDica()" >
+      Minha Ficha Médica
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" on-click="goToCadastroPerfilDependentes()">
+      Dependentes
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" on-click="goToCadastroPerfilContatos()">
+      Contatos
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" id="cadastroPerfilPessoal-list-item75">
+      Permissões de Visibilidade
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+    <ion-item color="none" id="cadastroPerfilPessoal-list-item76">
+      Permissões de Gerenciamento
+      <ion-icon name="arrow-dropright" item-right></ion-icon>
+    </ion-item>
+  </form>
+</ion-content>
