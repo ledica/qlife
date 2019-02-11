@@ -9,26 +9,62 @@
 
 </ion-header>
 
-<ion-content padding >
-  <form>
-    <ion-item color="none">
-      <ion-avatar item-left>
-        <img />
-      </ion-avatar>
-      <h2>
-        Maria Tereza Cristina
-      </h2>
-      {{ email }}
-    </ion-item>
-  </form>
+<ion-content padding>
+
+
+  <ion-avatar item-left>
+    <img class="circle" [src]="usuario?.perfilPessoal?.imageUrl || 'assets/imgs/avatar.png'">
+  </ion-avatar>
+  <h2 text-center>{{usuario?.nome}}</h2>
+  <p text-center>{{usuario?.email}}</p>
+  <p text-center>{{usuario?.telefone}}</p>
+
+
 
   <div class="show-list-numbers-and-dots">
     <p style="color:#000000;">
-      30 fev 1978 (30 anos) Sangue:
+      {{usuario?.perfilPessoal?.nascimento}} Sangue:
       <strong>
-        A+
+        {{usuario?.perfilPessoal?.tipoSangue}}
       </strong>
     </p>
+    <p style="color:#000000;">
+      Residência:
+      <strong>
+
+        {{usuario?.perfilPessoal?.residencia?.cep}},
+        {{usuario?.perfilPessoal?.residencia?.logradouro}}
+        {{usuario?.perfilPessoal?.residencia?.numero}},
+        {{usuario?.perfilPessoal?.residencia?.bairro}},
+        {{usuario?.perfilPessoal?.residencia?.cidade}} -
+        {{usuario?.perfilPessoal?.residencia?.estado}}
+      </strong>
+    </p>
+    <p style="color:#000000;">
+      Sexo:
+      <strong>
+        {{usuario?.perfilPessoal?.sexo}}
+      </strong>
+    </p>
+    <ion-list>
+
+      <ion-item>
+        <ion-label>Doador de Sangue</ion-label>
+        <ion-checkbox color="danger" disabled="true" checked="{{usuario?.perfilPessoal?.doadorSangue}}"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Doador de Orgãos </ion-label>
+        <ion-checkbox  color="danger" disabled="true" checked="{{usuario?.perfilPessoal?.doadorOrgao}}"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Pratica Esportes</ion-label>
+        <ion-checkbox color="danger" disabled="true" checked="{{usuario?.perfilPessoal?.praticaEsporte}}"></ion-checkbox>
+      </ion-item>
+
+    </ion-list>
+
     <p style="color:#000000;">
       Problemas de Saúde:
       <strong>

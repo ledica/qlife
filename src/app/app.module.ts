@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { AlergiaService } from '../services/domain/alergia.service';
+
+import { UsuarioService } from '../services/domain/usuario.service';
 import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
 import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
@@ -33,6 +35,7 @@ import { StorageService } from '../services/storage.service';
     AlergiaService,
     ErrorInterceptorProvider,
     AuthService,
+    UsuarioService,
     StorageService
   ]
 })
