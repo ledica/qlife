@@ -17,9 +17,32 @@ export class MyApp {
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
+
+   
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: 'HomePage' }
+      { title: 'Atividades', component: 'HomePage' },
+      { title: 'DashBoard', component: 'SelecaoDashBoardPage' },
+      { title: 'Perfil', component: "" }, 
+      { title: 'Minha Ficha Médica', component: "ProntuarioPage" },
+      { title: 'Perfis de Dependentes', component: "" },  
+      { title: 'Meu Perfil Profissional', component: "HomeProfissionalPage" }, 
+      { title: 'Gerenciar Instituições', component: "HomeInstituicaoPage" }, 
+      { title: 'Alertas', component: "" }, 
+      { title: 'Grupos e Contatos', component: "" }, 
+      { title: 'Contatos de Emergência', component: "" }, 
+      { title: 'Contatos de Familiares', component: "" }, 
+      { title: 'Contatos de Amigos', component: "" }, 
+      { title: 'Contatos de Profissionais de Saúde', component: "" }, 
+      { title: 'Contatos de Instituições', component: "" },
+      { title: 'Gráficos', component: "" }, 
+      { title: 'Configurações', component: "" }, 
+      { title: 'QR Code', component: "" }, 
+      { title: 'Baixar Dados', component: "" },
+      { title: 'Compartilhar', component: "" },
+      { title: 'Termos de Uso', component: "" },
+      { title: 'FAQ', component: "" },
+      { title: 'Suporte', component: "" }
     ];
 
   }
