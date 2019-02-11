@@ -4,51 +4,57 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      CadastroConta
+      Cadastro Conta
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page3">
-  <form id="cadastroConta-form2">
-    <ion-list id="cadastroConta-list4">
-      <ion-item id="cadastroConta-input3">
-        <ion-label>
-          Name
-        </ion-label>
-        <ion-input type="text" placeholder=""></ion-input>
+<ion-content padding >
+  <form  [formGroup]="formGroup" (ngSubmit)="signupUser(); $event.preventDefault()">
+    <ion-list>
+      <ion-item >
+        <ion-label stacked>Nome*</ion-label>
+        <ion-input formControlName="nome"  type="text" placeholder=""></ion-input>
       </ion-item>
-      <ion-item id="cadastroConta-input4">
-        <ion-label>
-          Email
-        </ion-label>
-        <ion-input type="email" placeholder=""></ion-input>
+      <p class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors" margin-left>Valor inválido</p>
+      <ion-item >
+        <ion-label stacked>Email*</ion-label>
+        <ion-input formControlName="email" type="email" placeholder=""></ion-input>
       </ion-item>
-      <ion-item id="cadastroConta-input5">
-        <ion-label>
+      <p class="danger" *ngIf="formGroup.controls.email.dirty && formGroup.controls.email.errors" margin-left>Valor inválido</p>
+      <ion-item>
+        <ion-label stacked>
           Password
         </ion-label>
-        <ion-input type="text" placeholder=""></ion-input>
+        <ion-input  formControlName="password" type="text" placeholder=""></ion-input>
       </ion-item>
-      <ion-item id="cadastroConta-input13">
-        <ion-label>
+      <p class="danger" *ngIf="formGroup.controls.password.dirty && formGroup.controls.password.errors" margin-left>Valor inválido</p>
+
+      <ion-item >
+        <ion-label stacked>
           Telefone
         </ion-label>
-        <ion-input type="text" placeholder=""></ion-input>
+        <ion-input  formControlName="telefone" type="text" placeholder=""></ion-input>
       </ion-item>
-      <ion-item id="cadastroConta-input6">
-        <ion-label>
+      <p class="danger" *ngIf="formGroup.controls.telefone.dirty && formGroup.controls.telefone.errors" margin-left>Valor inválido</p>
+
+      <ion-item>
+        <ion-label stacked>
           CPF
         </ion-label>
-        <ion-input type="text" placeholder=""></ion-input>
+        <ion-input  formControlName="cpf" type="text" placeholder=""></ion-input>
       </ion-item>
-      <ion-item id="cadastroConta-input7">
-        <ion-label>
+      <p class="danger" *ngIf="formGroup.controls.cpf.dirty && formGroup.controls.cpf.errors" margin-left>Valor inválido</p>
+
+      <ion-item>
+        <ion-label stacked>
           RG
         </ion-label>
-        <ion-input type="text" placeholder=""></ion-input>
+        <ion-input  formControlName="rg" type="text" placeholder=""></ion-input>
       </ion-item>
+      <p class="danger" *ngIf="formGroup.controls.rg.dirty && formGroup.controls.rg.errors" margin-left>Valor inválido</p>
+
     </ion-list>
-    <button id="cadastroConta-button7" ion-button color="stable" block on-click="goToCadastroPerfil()">
+    <button  ion-button color="stable" type="submit" block>
       Cadastrar
     </button>
   </form>
