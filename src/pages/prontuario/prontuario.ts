@@ -26,17 +26,24 @@ export class ProntuarioPage {
       this.usuarioService.findByEmail(localUser.email).subscribe(response => {
         this.usuario = response;
         this.getImageIfExists();
-      }, error => { });
+      }, error => {
+        if (error.status == 403) {
+          this.navCtrl.setRoot('HomePage');
+        }
+      });
+    }
+    else {
+      this.navCtrl.setRoot('HomePage');
     }
   }
 
   getImageIfExists() {
     this.usuarioService.getImageFromPerfilPessoal(this.usuario.id)
-    .subscribe(response => {
-      this.usuario.perfilPessoal.imageUrl =`${API_CONFIG.baseUrl}/api/v1/usuario/${this.usuario.id}/perfil/pessoal/avatar`
-      ;
-    },
-    error => {});
+      .subscribe(response => {
+        this.usuario.perfilPessoal.imageUrl = `${API_CONFIG.baseUrl}/api/v1/usuario/${this.usuario.id}/perfil/pessoal/avatar`
+          ;
+      },
+        error => { });
   }
 
 }
