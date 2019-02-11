@@ -11,6 +11,7 @@ import { AlergiaService } from '../services/domain/alergia.service';
 
 import { UsuarioService } from '../services/domain/usuario.service';
 import { ErrorInterceptorProvider } from '../interceptors/error-interceptor';
+import { AuthInterceptorProvider } from '../interceptors/auth-interceptor';
 import { AuthService } from '../services/auth.service';
 import { StorageService } from '../services/storage.service';
 
@@ -32,9 +33,10 @@ import { StorageService } from '../services/storage.service';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AlergiaService,
+    AuthInterceptorProvider,
     ErrorInterceptorProvider,
     AuthService,
+    AlergiaService,
     UsuarioService,
     StorageService
   ]
