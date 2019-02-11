@@ -27,6 +27,18 @@ export class HomePage {
     this.menu.swipeEnable(false);
   }
 
+
+  ionViewDidEnter() {
+    this.auth.refreshToken()
+      .subscribe(response => {
+        this.auth.successfulLogin(response.headers.get('Authorization'));
+        this.navCtrl.setRoot('SelecaoDashBoardPage');
+      },
+      error => {});  
+  }
+
+
+
   ionViewDidLeave() {
     this.menu.swipeEnable(true);
   }
